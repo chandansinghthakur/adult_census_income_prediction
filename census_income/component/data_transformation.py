@@ -45,10 +45,6 @@ class DataTransformation:
 
             num_pipeline = Pipeline(steps=[
                 ('imputer', SimpleImputer(strategy="median")),
-                ('feature_generator', FeatureGenerator(
-                    add_bedrooms_per_room=self.data_transformation_config.add_bedroom_per_room,
-                    columns=numerical_columns
-                )),
                 ('scaler', StandardScaler())
             ]
             )
