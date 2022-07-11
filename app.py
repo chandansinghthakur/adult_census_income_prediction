@@ -8,12 +8,12 @@ app=Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def index():
     try:
-        pass
+        return '<h1>Checking the functionality.</h1>'
     except Exception as e:
         housing = Acip_Exception(e,sys)
         logging.info(housing.error_message)
         logging.info("This is a info message")
-        return '<h1>Checking the functionality.</h1>'
+    
 
 if __name__=="__main__":
     app.run(debug=True)

@@ -64,7 +64,7 @@ class DataIngestion:
             
             # Census data file
             logging.info(f"Reading the census data from [ {census_file_path} ]")
-            census_data_frame = pd.read_csv(census_file_path)
+            census_data_frame = pd.read_csv(census_file_path, low_memory=False)
             
             census_data_frame["income_bracket"] = census_data_frame["salary"].apply(lambda x: ">50K" if x == ">50K." else "<=50K")
             
@@ -125,6 +125,6 @@ class DataIngestion:
         
     def __del__(self):
         try:
-            logging.info(f"{'='*30} Data ingestion completed {'='*30}")
+            logging.info(f"{'='*30} Data ingestion completed {'='*30}\n\n")
         except Exception as e:
             raise Acip_Exception(e,sys) from e

@@ -1,6 +1,8 @@
 from census_income.pipeline.pipeline import Pipeline
 from census_income.exception import Acip_Exception
 from census_income.logger import logging
+from census_income.config.configuration import Configuration
+
 def main():
     try:
         pipeline = Pipeline()
