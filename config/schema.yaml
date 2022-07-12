@@ -1,5 +1,5 @@
 columns:
-  age: float
+  age: int
   capital-gain: float
   capital-loss: float
   education: object
