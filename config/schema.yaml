@@ -1,18 +1,18 @@
 columns:
   age: int
-  capital-gain: float
-  capital-loss: float
+  workclass: object
+  fnlwgt: float
   education: object
   education-num: float
-  fnlwgt: float
-  hours-per-week: float
   marital-status: object
-  native-country: object
   occupation: object
-  race: object
   relationship: object
+  race: object
   sex: object
-  workclass: object
+  capital-gain: float
+  capital-loss: float
+  hours-per-week: float
+  country: object
 
 numerical_columns:
   - age
@@ -25,7 +25,7 @@ numerical_columns:
 categorical_columns:
  - education
  - marital-status
- - native-country
+ - country
  - occupation
  - race
  - relationship
