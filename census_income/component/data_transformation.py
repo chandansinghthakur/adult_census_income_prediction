@@ -102,13 +102,13 @@ class DataTransformation:
             
 
             logging.info(f"Applying preprocessing object on training dataframe and testing dataframe")
-            input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
-            input_feature_test_arr = preprocessing_obj.transform(input_feature_test_df)
+            # input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
+            # input_feature_test_arr = preprocessing_obj.transform(input_feature_test_df)
 
 
-            train_arr = np.c_[ input_feature_train_arr, np.array(target_feature_train_df)]
+            train_arr = np.c_[input_feature_train_df,np.array(target_feature_train_df)]
 
-            test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
+            test_arr = np.c_[input_feature_test_df, np.array(target_feature_test_df)]
             
             transformed_train_dir = self.data_transformation_config.transformed_train_dir
             transformed_test_dir = self.data_transformation_config.transformed_test_dir
@@ -124,7 +124,7 @@ class DataTransformation:
             save_numpy_array_data(file_path=transformed_train_file_path,array=train_arr)
             save_numpy_array_data(file_path=transformed_test_file_path,array=test_arr)
 
-            preprocessing_obj_file_path = self.data_transformation_config.preprocessed_objects_file_path
+            preprocessing_obj_file_path = self.data_transformation_config.preprocessed_object_file_path
 
             logging.info(f"Saving preprocessing object.")
             save_object(file_path=preprocessing_obj_file_path,obj=preprocessing_obj)

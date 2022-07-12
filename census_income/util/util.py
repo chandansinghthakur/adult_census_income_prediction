@@ -57,7 +57,7 @@ def load_numpy_array_data(file_path: str) -> np.array:
     """
     try:
         with open(file_path, 'rb') as file_obj:
-            return np.load(file_obj)
+            return np.load(file_obj, allow_pickle=True)
     except Exception as e:
         raise Acip_Exception(e, sys) from e
 
@@ -100,7 +100,7 @@ def load_data(file_path: str, schema_file_path: str) -> pd.DataFrame:
 
         for column in dataframe.columns:
             if column in list(schema.keys()):
-                dataframe[column] = dataframe[column].astype(schema[column])
+                dataframe[column].astype(schema[column])
             else:
                 error_messgae = f"{error_messgae} \nColumn: [{column}] is not in the schema."
         if len(error_messgae) > 0:

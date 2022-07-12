@@ -1,4 +1,4 @@
-from cgi import test
+
 from census_income.entity.config_entity import DataIngestionConfig
 from census_income.logger import logging
 from census_income.exception import Acip_Exception
