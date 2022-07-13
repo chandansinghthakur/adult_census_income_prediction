@@ -16,6 +16,26 @@ from census_income.util.util import read_yaml_file,save_object,save_numpy_array_
 
 
 
+class FeatureGenerator(BaseEstimator, TransformerMixin):
+    
+    def __init__(self,strategy="median"):
+        self.strategy = strategy
+
+
+    def fit(self,x):
+        self.features = x.columns
+        self.statistics_ = []
+        for column in x.columns:
+            self.statistics_.append(x[column].median())
+        return self
+    
+    def transform(self,x):
+        for idx,column in enumerate(x.columns):
+            x[column].fillna(self.statistics_[idx])
+        return x
+
+
+
 class DataTransformation:
 
     def __init__(self, data_transformation_config: DataTransformationConfig,

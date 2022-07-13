@@ -1,6 +1,6 @@
 columns:
   age: int64
-  workclass: object
+  workclass: category
   fnlwgt: int64
   education-num: int64
   capital-gain: int64

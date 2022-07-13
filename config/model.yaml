@@ -6,18 +6,13 @@ grid_search:
     verbose: 2
 model_selection:
   module_0:
-    class: LinearRegression
-    module: sklearn.linear_model
-    params:
-      fit_intercept: true
-    search_param_grid:
-      fit_intercept:
-      - true
-      - false
-  module_1:
-    class: RandomForestRegressor
+    class: RandomForestClassifier
     module: sklearn.ensemble
     params:
+      n_estimators: 100
+      max_depth: None
+      criterion: 'gini'
+      max_features: 'sqrt'
       min_samples_leaf: 2
     search_param_grid:
       min_samples_leaf:
