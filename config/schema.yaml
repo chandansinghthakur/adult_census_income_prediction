@@ -1,12 +1,20 @@
 columns:
   age: int64
-  workclass: category
+  workclass: object
   fnlwgt: int64
   education-num: int64
   capital-gain: int64
   capital-loss: int64
   hours-per-week: int64
   salary: object
+  education: object
+  marital-status: object
+  occupation: object
+  relationship: object
+  race: object
+  sex: object
+  country: object
+
 
 numerical_columns:
   - age
@@ -19,16 +27,23 @@ numerical_columns:
 
 categorical_columns:
   - workclass
+  - education
+  - marital-status
+  - occupation
+  - relationship
+  - race
+  - sex
+  - country
 
 target_column: salary
 
-domain value:
-  workclass:
-    - Private
-    - Self-emp-not-inc
-    - Self-emp-inc
-    - Federal-gov
-    - Local-gov
-    - State-gov
-    - Without-pay
-    - Never-worked
+# domain value:
+#   workclass:
+#     - Private
+#     - Self-emp-not-inc
+#     - Self-emp-inc
+#     - Federal-gov
+#     - Local-gov
+#     - State-gov
+#     - Without-pay
+#     - Never-worked
