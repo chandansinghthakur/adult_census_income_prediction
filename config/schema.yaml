@@ -16,6 +16,7 @@ numerical_columns:
   - fnlwgt
   - hours-per-week
 
+
 categorical_columns:
   - workclass
 
