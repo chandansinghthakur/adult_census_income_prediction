@@ -67,7 +67,7 @@ class DataTransformation:
                 ('imputer', SimpleImputer(strategy="median")),
                 ('scaler', StandardScaler())
             ]
-            )
+            )   
 
             cat_pipeline = Pipeline(steps=[
                  ('impute', SimpleImputer(strategy="most_frequent")),

@@ -4,7 +4,7 @@ training_pipeline_config:
 
 data_ingestion_config:
   # dataset_download_url: https://raw.githubusercontent.com/chandansinghthakur/adult_census_income_prediction/main/demo.csv
-  dataset_download_url: https://raw.githubusercontent.com/chandansinghthakur/adult_census_income_prediction/main/demo5.csv
+  dataset_download_url: https://raw.githubusercontent.com/chandansinghthakur/adult_census_income_prediction/main/demo6.csv
   raw_data_dir: raw_data
   tgz_download_dir: tgz_data
   ingested_dir: ingested_data
