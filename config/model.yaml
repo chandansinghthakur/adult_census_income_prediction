@@ -6,14 +6,15 @@ grid_search:
     verbose: 2
 model_selection:
   module_0:
-    class: RandomForestClassifier
-    module: sklearn.ensemble
+    class: XGBClassifier
+    module: xgboost
     params:
-      n_estimators: 100
-      max_depth: None
-      criterion: 'gini'
-      max_features: 'sqrt'
-      min_samples_leaf: 2
+      n_estimators: 5
+      max_depth: 6
+      learning_rate: 0.05
+      subsample: 0.8
+      colsample_bytree: 0.7
+      objective: 'binary:logistic'
     search_param_grid:
       min_samples_leaf:
       - 6

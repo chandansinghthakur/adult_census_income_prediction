@@ -11,6 +11,7 @@ from collections import namedtuple
 from typing import List
 from census_income.logger import logging
 from sklearn.metrics import r2_score,mean_squared_error
+from xgboost import XGBClassifier
 
 GRID_SEARCH_KEY = 'grid_search'
 MODULE_KEY = 'module'

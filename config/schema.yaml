@@ -37,13 +37,13 @@ categorical_columns:
 
 target_column: salary
 
-# domain value:
-#   workclass:
-#     - Private
-#     - Self-emp-not-inc
-#     - Self-emp-inc
-#     - Federal-gov
-#     - Local-gov
-#     - State-gov
-#     - Without-pay
-#     - Never-worked
+domain value:
+  workclass:
+    - Private
+    - Self-emp-not-inc
+    - Self-emp-inc
+    - Federal-gov
+    - Local-gov
+    - State-gov
+    - Without-pay
+    - Never-worked
